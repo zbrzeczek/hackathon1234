@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,14 @@
     <title>FlkApp</title>
 </head>
 <body>
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Index {% endblock %}</h1>
+>>>>>>> 3af0c492ddf7535828b0e660485c70f812cf6159
     <h1>Hello World!</h1>
     <h2>Welcome to FlaskApp!</h2>
-</body>
-</html>
+    <h3>{{ utc_dt }}</h3>
+{% endblock %}
 
