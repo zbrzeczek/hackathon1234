@@ -1,0 +1,28 @@
+
+
+
+h2 {
+    color: #d64161;
+    font-size: 3em;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+h3 {
+    font-style: italic;
+    color: red;
+}
+nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        h1 {
+            color: blue;
+        }
+
+
+ /*   
+    jak jest 1 to ma sie wyswietlac
+        */
