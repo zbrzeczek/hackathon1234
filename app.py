@@ -1,10 +1,12 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 import datetime
 import time
 
 app = Flask(__name__)
 
+<<<<<<< HEAD
 # this function calculates how much time has passed since running the program, if the time of running exceeds 2hrs, the timer informs the user to get up and walk, it also returns the "screen time"
 
 def user_timer():
@@ -24,6 +26,21 @@ def user_timer():
 
 # Call the function
 user_timer()
+=======
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+class user(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    imie = db.Column(db.String(20), unique=False, nullable=False)
+    nazwisko = db.Column(db.String(20), unique=False, nullable=False)
+    punkty = db.Column(db.Integer, unique=False, nullable=False)
+
+    def __repr__(self):
+        return f'<User {self.imie}>'
+>>>>>>> 2858fbeb298037232f61a9b7a391e2317d2c4386
 
 @app.route('/')
 def hello():
@@ -33,4 +50,10 @@ def hello():
 def about():
     return render_template('about.html')
 
+<<<<<<< HEAD
 
+=======
+if (__name__ == "__main__"):
+    app.run(debug=True)
+    db.create_all()
+>>>>>>> 2858fbeb298037232f61a9b7a391e2317d2c4386
