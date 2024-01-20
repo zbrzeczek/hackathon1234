@@ -21,8 +21,7 @@ def user_sitting_timer():
             # Check if 30 seconds have passed
             if elapsed_time >= 7200:
                 noTimeLeft = 1
-                print("You need to get up and leave your desk immediately, give your eyes some rest")
-                break  # Breaks the inner loop to restart the timer
+                return noTimeLeft
 
 
 #### function reminding the user to drink water
@@ -38,11 +37,11 @@ def user_water_timer():
             # Check if 30 seconds have passed
             if elapsed_time >= 3600:
                 noTimeLeft = 1
-                print("You need to drink some water, stay hydrated")
-                break  # Breaks the inner loop to restart the timer
+                return noTimeLeft
 
 
 #### function reminding the user to look 
+
 
 #=======
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///example.db'
