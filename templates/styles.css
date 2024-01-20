@@ -1,7 +1,5 @@
 
-h1 {
-    color: blue;
-}
+
 
 h2 {
     color: #d64161;
@@ -20,7 +18,9 @@ nav a {
             margin-left: 50px;
             text-decoration: none;
         }
-
+        h1 {
+            color: blue;
+        }
 
 
  /*   
